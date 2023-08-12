@@ -79,19 +79,68 @@
         visibility: hidden;
         pointer-events: none;
     }
-    .toggle-btn{
+    .toggle-button{
+        width: 40px;
+        height: 15px;
         visibility: visible;
         pointer-events: all;
+        position: relative;
+        color: #fff;
+    }
+    .toggle-menu.active{
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .toggle-button i{
+        font-size: 15px;
+        position: absolute;
+        top: 0;
+        right: 10px;
     }
     .main-menu.active{
         visibility: visible;
         pointer-events: all;
     }
+    .close-btn{
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .close-btn.active{
+        visibility: visible;
+        pointer-events: all;
+    }
+    .user-admin {
+        display: none;
+    }
+    .search-area{
+        margin-right: 15px;
+    }
 }
 
 /* Extra Small Devices */
 @media (max-width:767px) {
+    .section-group {
+        flex-direction: column;
+    }
+    .hero-content {
+        order: 2;
+        margin-top: 66px;
 
+    }
+    .about-section .section-group {
+        flex-direction: column;
+    }
+    .about-section .section-subtitle {
+        text-align: center;
+    }
+    .about-content {
+        text-align: center;
+        margin-top: 50px;
+        padding-left: 0;
+    }
+    .service-group {
+        flex-direction: column;
+    }
 }
    
 /* Mobile */

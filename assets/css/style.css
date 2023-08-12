@@ -94,6 +94,7 @@ span{
     padding: 15px 25px;
 }
 .main-menu i{
+    color: var(--white-color);
     position: absolute;
     padding: 3px;
 }
@@ -104,10 +105,27 @@ span{
     text-align: center;
     flex: 1.5;
 }
-.login-bar .search{
-    /* margin-right: 20px; */
-    color: var(--white-color);
+.search-area{
+    width: 50px;
+    height: 15px;
+    position: relative;
+}
+.search-area i{
+    position: absolute;
     cursor: pointer;
+    color: var(--white-color);
+}
+.search.active{
+    visibility: hidden;
+    pointer-events: none;
+}
+.close{
+    visibility: hidden;
+    pointer-events: none;
+}
+.close.active{
+    visibility: visible;
+    pointer-events: all;
 }
 .login-bar .search:hover{
     color:var(--theme-color)
@@ -127,7 +145,7 @@ span{
     text-align: center;
     padding-right: 8px;
 }
-.toggle-btn{
+.toggle-button{
     color: var(--white-color);
     font-size: 20px;
     visibility: hidden;

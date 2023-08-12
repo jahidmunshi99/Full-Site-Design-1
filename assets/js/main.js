@@ -1,11 +1,34 @@
 // *************************************************************************
 //                         Toggle Button
 // *************************************************************************
-const toggleBtn = document.querySelector(".toggle-btn")
-const mainMenu = document.querySelector(".main-menu")
+const toggleBtn = document.querySelector(".toggle-menu");
+const mainMenu = document.querySelector(".main-menu");
+const togleClose = document.querySelector(".close-btn");
+const searchBtn = document.querySelector(".search");
+const closeBtn = document.querySelector(".close");
+
+
 
 toggleBtn.addEventListener("click", ()=>{
     mainMenu.classList.toggle("active");
+    togleClose.classList.toggle("active");
+    toggleBtn.classList.toggle("active")
+})
+togleClose.addEventListener("click", ()=>{
+    mainMenu.classList.remove("active");
+    togleClose.classList.remove("active");
+    toggleBtn.classList.remove("active");
+})
+
+// Search Bar
+searchBtn.addEventListener("click", ()=>{
+    closeBtn.classList.add("active");
+    searchBtn.classList.add("active");
+})
+
+closeBtn.addEventListener("click", ()=>{
+    closeBtn.classList.remove("active");
+    searchBtn.classList.remove("active");
 })
 
 
