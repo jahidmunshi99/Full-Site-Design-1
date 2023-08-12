@@ -1,0 +1,421 @@
+/* ===========================================       ===========================================
+                                               Fonts 
+   ===========================================       =========================================== */
+@font-face {
+    font-family: tfont;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: tmedium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: tbold;
+    src: url(../fonts/Roboto-Black.ttf);
+}
+
+/* Base */
+*, ::before, ::after{margin: 0; padding: 0; box-sizing: border-box;}
+:root{
+    /* Custom Color */
+    --theme-color:#DAED1A;
+    --white-color:#fff;
+    --black-color:#000;
+    --gray-color:#686C79;
+    --btn-bg-color:#DAED1A;
+    --blue-color:#2662FA;
+    --pink-color:#F50963;
+    --light-green-color:#47D990;
+    --purple-color:#9D69F0;
+    --sky-blue-color:#31DBF8;
+    --paste-color:#EAF8F3;
+    --purple-light-color:#EFE6FE;
+    --green-light-2-color:#ECFBF4;
+    --cream-biscut-color:#FEF1E7;
+    --skybule-light-color:#D8F9FF;
+    --yello-light-color:#FFFAE5;
+    --yello-depth-color:#FDB511;
+    /* Typography */
+    --theme-font: tfont ;
+}
+body{
+    font-family: var(--theme-font);
+    color: var(--black-color);
+    scroll-behavior: smooth;
+}
+.container{
+    max-width: 1280px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+ul li{list-style-type: none;} 
+a{text-decoration: none; color: var(--black-color);}
+span{
+    display: inline-block;
+    color: var(--theme-color);
+}
+.btn{
+    display: inline-block;
+    background: var(--btn-bg-color);
+    padding: 11px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--black-color);
+    border: 2px solid var(--theme-color);
+}
+.btn:hover{
+    background: transparent;
+    color: var(--theme-color);
+}
+/* ===========================================             ===========================================
+                                               Header Section 
+   ===========================================                =========================================== */
+.header-section{
+    background:var(--sky-blue-color);
+    padding-top: 2ic;
+}
+.header-section a{
+    color: var(--white-color);
+}
+.header-section a:hover{
+    color: var(--theme-color);
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.main-menu{
+    flex: 3;
+}
+.main-menu ul li{
+    display: inline-block;
+    padding: 15px 25px;
+}
+.main-menu i{
+    position: absolute;
+    padding: 3px;
+}
+.login-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1.5;
+    text-align: center;
+}
+.login-bar .search{
+    margin-right: 20px;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.login-bar .search:hover{
+    color:var(--theme-color)
+}
+.login-bar a{
+    margin-right: 10%;
+}
+.login-bar i{
+    text-align: center;
+    padding-right: 10px;
+}
+.toggle-btn{
+    color: var(--white-color);
+    font-size: 20px;
+    visibility: hidden;
+    pointer-events: none;
+    cursor: pointer;
+}
+/* DropDown Menu */
+.main-menu ul li:hover .tdropdown-menu{
+    visibility: visible;
+    pointer-events: all;
+}
+.tdropdown{
+    position: relative;
+}
+.tdropdown ul li{
+    display: block;
+    padding: 12px 20px;
+    text-align: left;
+    transition: 0.3s;
+}
+.tdropdown ul li:hover{
+    margin-left: 10px;
+}
+.tdropdown-menu{
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 50px;
+    left: 7px;
+    width: 200px;
+    border-top: 1px solid var(--theme-color);
+    background: var(--black-color);
+    z-index: 1001;
+}
+/* ===========================================             ===========================================
+                                               Hero Section 
+   ===========================================                =========================================== */
+
+.hero-section{
+    background: url(../image/hero-bg.jpg) no-repeat center / cover;
+    margin-top: -85px;
+    padding-top: 85px;
+}
+
+.section-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.hero-content{
+    flex-basis: 50%;
+}
+.hero-content h2, h3, p{
+    color: var(--white-color);
+}
+.hero-content h2{
+    font-size: clamp(50px, 5vw, 30px);
+}
+.hero-content h3{
+    font-size: 35px;
+    margin: 35px 0px;
+}
+.hero-content p{
+    line-height: 25px;
+    margin-bottom: 40px;
+}
+.section-group .hero-image{
+    flex-basis: 40%;
+    text-align: right;
+}
+.section-group img{
+    width: 100%;
+}
+/* ===========================================             ===========================================
+                                               About Section 
+   ===========================================                =========================================== */
+.about-section{
+    background: url(../image/bg-about.png) no-repeat center / cover;
+}
+.about-section .section-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-group{
+    padding: 50px 0;
+}
+.about-image{
+    flex-basis: 35%;
+}
+.about-image img{
+    width: 100%;
+    background: #2662fa6b;
+}
+.about-content{
+    flex-basis: 55%;
+    text-align: left;
+    padding-left: 50px;;
+}
+.section-title{
+    font-size: clamp(45px, 5vw, 30px);
+    font-family: tmedium;
+    color: var(--purple-color);
+}
+.about-section .section-subtitle{
+    color: var(--black-color);
+    font-size: clamp(25px, 5vw, 30px);
+    margin: 20px 0;
+    text-align: left;
+}
+.section-details{
+    color: var(--black-color);
+    line-height: 28px;
+    margin: 20px 0;
+}
+.about-btn{
+    margin-top: 30px;
+    background: #2662fa6b;
+    border: 3px solid #2662fa6b;
+}
+.about-btn:hover{
+    color: #2662fa6b;
+}
+
+/* ===========================================             ===========================================
+                                               Service Section 
+   ===========================================                =========================================== */
+.service-section{
+    padding: 80px 0;
+    background: var(--paste-color);
+}
+.service-section .section-title, .section-subtitle{
+    text-align: center;
+}
+.service-section .section-title{
+    color: var(--black-color);
+}
+.service-section  .section-subtitle{
+    color: var(--gray-color);
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: var(--theme-font);
+    font-weight: normal;
+}
+.service-group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.service-card{
+    flex-basis: 31.5%;
+    border: 1px solid #f3f2f2;
+    background: var(--white-color);
+    padding:35px 20px;
+    text-align: center;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+.service-card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.service-card .logo i{
+    font-size: 40px;
+    color: var(--black-color);
+    padding: 30px;
+    border-radius: 50%;
+}
+.card-title{
+    font-size: 18px;
+    margin: 25px 0px 15px;
+}
+.card-info p{
+    color: #000;
+    font-size: 14px;
+    line-height: 25px;
+}
+.card-body .btn{
+    margin-top: 25px;
+    color: var(--white-color);
+}
+.service-card .card-btn:hover{
+    background: var(--white-color)
+}
+/* Card-1 */
+.tcard-1:hover{
+    border: 1px solid var(--blue-color);
+}
+.tcard-1 i{
+    background: #FFFAE5;
+}
+.service-card i{
+    color: var(--light-green-color);
+}
+.tcard-1:hover i{
+    color: var(--blue-color);
+}
+.tcard-1 .card-btn{
+    background: var(--blue-color);
+    border: 2px solid var(--blue-color);
+}
+.tcard-1 .card-btn:hover{
+    color: var(--blue-color);
+}
+/* Card-2 */
+.tcard-2:hover{
+    border: 1px solid var(--pink-color);
+}
+.tcard-2 i{
+    background: var(--purple-light-color);
+}
+.tcard-2:hover i{
+    color: var(--pink-color);
+}
+.tcard-2 .card-btn{
+    background: var(--pink-color);
+    border: 2px solid var(--pink-color);
+}
+.tcard-2 .card-btn:hover{
+    color: var(--pink-color);
+}
+/* Card-3 */
+.tcard-3:hover{
+    border: 1px solid var(--light-green-color);
+}
+.tcard-3 i{
+    background: var(--green-light-2-color);
+}
+.tcard-3:hover i{
+    color: var(--light-green-color);
+}
+.tcard-3 .card-btn{
+    background: var(--light-green-color);
+    border: 2px solid var(--light-green-color);
+}
+.tcard-3 .card-btn:hover{
+    color: var(--light-green-color);
+}
+/* Card-4 */
+.tcard-4:hover{
+    border: 1px solid var(--purple-color);
+}
+.tcard-4 i{
+    background: var(--purple-light-color);
+}
+.tcard-4:hover i{
+    color: var(--purple-color);
+}
+.tcard-4 .card-btn{
+    background: var(--purple-color);
+    border: 2px solid var(--purple-color);
+}
+.tcard-4 .card-btn:hover{
+    color: var(--purple-color);
+    background: var(--white-color);
+}
+/* Card-5 */
+.tcard-5:hover{
+    border: 1px solid var(--sky-blue-color);
+}
+.tcard-5 i{
+    background: var(--skybule-light-color);
+}
+.tcard-5:hover i{
+    color: var(--sky-blue-color);
+}
+.tcard-5 .card-btn{
+    background: var(--sky-blue-color);
+    border: 2px solid var(--sky-blue-color);
+}
+.tcard-5 .card-btn:hover{
+    color: var(--sky-blue-color);
+}
+/* Card-6 */
+.tcard-6:hover{
+    border: 1px solid var(--yello-depth-color);
+}
+.tcard-6 i{
+    background: var(--yello-light-color);
+}
+.tcard-6:hover i{
+    color: var(--yello-depth-color);
+}
+.tcard-6 .card-btn{
+    background: var(--yello-depth-color);
+    border: 2px solid var(--yello-depth-color);
+}
+.tcard-6 .card-btn:hover{
+    color: var(--yello-depth-color);
+}
+/* ===========================================             ===========================================
+                                               Footer Section 
+   ===========================================                =========================================== */
+.footer-section{
+    background: var(--black-color);
+    text-align: center;
+    padding: 20px 0;
+}
