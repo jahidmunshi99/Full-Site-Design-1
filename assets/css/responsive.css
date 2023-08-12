@@ -2,12 +2,12 @@
 /* @media (min-width:1920) {} */
 
 /* Desktops */
-@media (max-width:1919px) {
+/* @media (max-width:1919px) {
     .container {
         max-width: 1919px;
         padding: 0 5%;
     }
-}
+} */
 
 /* Large Tablets */
 @media (max-width:1199px) {

@@ -87,7 +87,7 @@ span{
     text-align: center;
 }
 .main-menu{
-    flex: 3;
+    flex: 2.5;
 }
 .main-menu ul li{
     display: inline-block;
@@ -101,23 +101,31 @@ span{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex: 1.5;
     text-align: center;
+    flex: 1.5;
 }
 .login-bar .search{
-    margin-right: 20px;
+    /* margin-right: 20px; */
     color: var(--white-color);
     cursor: pointer;
 }
 .login-bar .search:hover{
     color:var(--theme-color)
 }
-.login-bar a{
-    margin-right: 10%;
+.user-admin{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* padding-left: 20px; */
 }
+.login-btn{
+    padding: 0 20px;
+    margin-right: 10px;
+}
+
 .login-bar i{
     text-align: center;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 .toggle-btn{
     color: var(--white-color);
